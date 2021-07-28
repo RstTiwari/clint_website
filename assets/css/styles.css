@@ -9,9 +9,9 @@
   --first-color: #00ff00;
   --first-color-alt: #0000ff;
   --title-color: #0000ff;
-  --text-color: #571aca;
+  --text-color: 	#ffffff;
   --text-color-light: #e22020;
-  --body-color: #0e0000;
+  --body-color: #000000;
   --container-color: #10ca10;
 
   /*========== Font and typography ==========*/
@@ -67,8 +67,8 @@ html{
 
 /*========== Variables Dark theme ==========*/
 body.dark-theme{
-  --title-color: #4c08eb;
-  --text-color: 	#ffffff;
+  --title-color: #eceaf0;
+  --text-color:	#ffffff;
   --body-color: 	#000000;
   --container-color: #e43112;
 
