@@ -11,18 +11,19 @@
   --title-color: #0000ff;
   --text-color: #571aca;
   --text-color-light: #e22020;
-  --body-color: #ffffff;
-  --container-color: #ffffff;
+  --body-color: #0e0000;
+  --container-color: #10ca10;
 
   /*========== Font and typography ==========*/
-  --body-font: 'Poppins', sans-serif;
-  --biggest-font-size: 2.25rem;
+  --body-font: 'popins', sans-serif;
+  --biggest-font-size: 2.5rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.5rem;
-  --h3-font-size: 3rem;
-  --normal-font-size: .938rem;
-  --small-font-size: .813rem;
-  --smaller-font-size: .75rem;
+  --h3-font-size: 1.5rem;
+  --h4-font-size:3.5;
+  --normal-font-size: 1.1rem;
+  --small-font-size: 1.5rem;
+  --smaller-font-size: 1.5rem;
 
   /*========== Font weight ==========*/
   --font-medium: 500;
@@ -34,7 +35,7 @@
   --mb-3: 1.5rem;
   --mb-4: 2rem;
   --mb-5: 2.5rem;
-  --mb-6: 3rem;
+  --mb-6: .5rem;
 
   /*========== z index ==========*/
   --z-tooltip: 0;
@@ -43,37 +44,40 @@
 
 @media screen and (min-width: 800px){
   :root{
-    --biggest-font-size: 4rem;
-    --h1-font-size: .087rem;
-    --h2-font-size: 1.25rem;
-    --h3-font-size: 0.25rem;
-    --normal-font-size: 1rem;
-    --small-font-size: .875rem;
-    --smaller-font-size: .813rem;
+    --biggest-font-size: 2rem;
+    --h1-font-size: 2.5rem;
+    --h2-font-size: 3rem;
+    --h3-font-size: 3rem;
+    --h4-font-size:3.5rem;
+    --normal-font-size: 1.5rem;
+    --small-font-size: 1.25rem;
+    --smaller-font-size: 1.25rem;
   }
 }
+
+
 
 /*========== BASE ==========*/
 *,::before,::after{
   box-sizing: border-box;
 }
-
 html{
   scroll-behavior: smooth;
 }
 
 /*========== Variables Dark theme ==========*/
 body.dark-theme{
-  --title-color: #F1F3F2;
-  --text-color: #C7D1CC;
-  --body-color: #1D2521;
-  --container-color: #27302C;
+  --title-color: #4c08eb;
+  --text-color: #e6dfdff3;
+  --body-color: 	#000000;
+  --container-color: #e43112;
+
 }
 
 
 
 body{
-  margin: var(--header-height) 0 0 1;
+  margin: var(--header-height) 0 0 10;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
@@ -104,18 +108,21 @@ ul{
   padding: 4rem 0 2rem;
 }
 
-.section-title, .section-subtitle{
-  text-align: center;
-}
-
 .section-title{
-  font-size: 50rem
-  color: var(--title-color);
-  margin-bottom: var(--mb-3);
+  text-align:center;
 }
 
 .section-subtitle{
-  display: ruby-text-container;
+  text-align: center;
+}
+.section-title{
+  font-size: 100rem
+  color: var(--title-color);
+  margin-bottom: var(--mb-10);
+}
+
+.section-subtitle{
+  display: ruby-base;
   color: var(--first-color);
   font-weight: var(--font-medium);
   margin-bottom: var(--mb-1);
@@ -131,7 +138,7 @@ ul{
 
 .bd-grid{
   display: grid;
-  gap: 2.5rem;
+  gap: 1.5rem;
 }
 
 .l-header{
@@ -149,7 +156,7 @@ ul{
   height: var(--header-height);
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: right;
 }
 
 @media screen and (max-width: 768px){
@@ -161,7 +168,7 @@ ul{
     padding: 1.5rem 0 1rem;
     text-align: center;
     background-color: var(--body-color);
-    transition: .4s;
+    transition: .2s;
     box-shadow: 0 4px 4px rgba(0,0,0,.1);
     border-radius: 0 0 1rem 1rem;
     z-index: var(--z-fixed);
@@ -206,7 +213,7 @@ ul{
 
 /* Change background header */
 .scroll-header{
-  box-shadow: 0 4px 4px rgba(230, 6, 6, 0.918);
+  box-shadow: 0 4px 4px rgba(238, 231, 231, 0.918);
 }
 
 /* Scroll top */
@@ -222,7 +229,7 @@ ul{
   border-radius: .9rem;
   z-index: var(--z-tooltip);
   transition: .4s;
-  visibility: hidden;
+  visibility: var(--z-fixed);
 }
 
 .scrolltop:hover{
@@ -242,7 +249,7 @@ ul{
 
 /*========== HOME ==========*/
 .home__container{
-  height: calc(250svh - var(--header-width));
+  height: calc(150svh - var(--header-width));
   align-content: center;
 }
 
@@ -259,10 +266,9 @@ ul{
 }
 
 .home__img{
-  width: 400px;
-
+  width: 300px;
   justify-self: center;
-  border-radius:.9rem ;
+  border-radius:0.25rem ;
 }
 
 /*========== BUTTONS ==========*/
@@ -462,7 +468,7 @@ ul{
 
   .about__container,
   .app__container{
-    column-gap: 7rem;
+    column-gap: 10rem;
   }
 }
 
